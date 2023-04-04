@@ -1,0 +1,15 @@
+---
+title: "Test"
+format: html
+editor: visual
+---
+
+```{r, echo=FALSE, include=FALSE}
+time <-Sys.time()
+```
+
+## Testing
+```{r}
+print(c("Hello, last time run was", format(time, format="%Y-%m-%d %H:%M:%S")))
+```
+
