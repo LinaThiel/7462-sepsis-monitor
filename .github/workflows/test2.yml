@@ -2,7 +2,7 @@ name: Render Report
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '0 * * * *'
   push:
     branches: [main]
   workflow_dispatch:
