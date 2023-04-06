@@ -7,4 +7,4 @@ Test
 print(c("Hello, last time run was", format(time, format="%Y-%m-%d %H:%M:%S")))
 ```
 
-    [1] "Hello, last time run was" "2023-04-06 08:20:24"     
+    [1] "Hello, last time run was" "2023-04-06 09:16:26"     
