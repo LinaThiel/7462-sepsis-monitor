@@ -1,0 +1,200 @@
+---
+title: "sepsis_assignment_v2"
+format: html
+editor: visual
+---
+
+```{r, echo=FALSE, include= FALSE}
+library(tidyverse)
+library(data.table) ## For the fread function
+library(lubridate)
+library(gt)
+library(googledrive)
+library(tictoc)
+
+source("sepsis_monitor_functions.R")
+```
+
+## Task 2
+
+-   Fread is faster than read_delim and it takes longer to read in data the more observations that you are reading in
+
+```{r,include=FALSE, ECHO=FALSE, eval=FALSE}
+tictoc:: tic()
+makeSepsisDataset(n=50, read_fn= "fread")
+tictoc:: toc()
+#7.79 seconds
+
+```
+
+```{r, include=FALSE,ECHO=FALSE, eval=FALSE}
+tictoc:: tic()
+makeSepsisDataset(n=100, read_fn= "fread")
+tictoc:: toc()
+#13.41 seconds
+```
+
+```{r, include=FALSE, ECHO=FALSE, eval=FALSE}
+tictoc:: tic()
+makeSepsisDataset(n=500, read_fn= "fread")
+tictoc:: toc()
+#66 seconds
+```
+
+```{r, include=FALSE, ECHO=FALSE, eval=FALSE}
+tictoc:: tic()
+makeSepsisDataset(n=50, read_fn= "read_delim")
+tictoc:: toc()
+#38.89 seconds 
+```
+
+```{r,include=FALSE,ECHO=FALSE, eval=FALSE}
+tictoc:: tic()
+makeSepsisDataset(n=100, read_fn= "read_delim")
+tictoc:: toc()
+#79.17 seconds
+```
+
+```{r, include=FALSE, ECHO=FALSE, eval=FALSE}
+tictoc:: tic()
+makeSepsisDataset(n=500, read_fn= "read_delim")
+tictoc:: toc()
+#90.07 seconds
+```
+
+
+```{r, include=FALSE, ECHO=FALSE}
+
+library(googledrive)
+
+df <- makeSepsisDataset()
+
+# We have to write the file to disk first, then upload it
+df %>% write_csv("sepsis_data_temp.csv")
+
+# Uploading happens here
+sepsis_file <- drive_put(media = "sepsis_data_temp.csv", 
+path = "https://drive.google.com/drive/u/0/folders/1kBTT9EvjUM2hpycLeEfB5uziX-paem4h", name = "sepsis_data.csv")
+
+# Set the file permissions so anyone can download this file.
+sepsis_file %>% drive_share_anyone()
+
+```
+
+## Task 4
+
+```{r, echo=FALSE, include=FALSE}
+## Calling drive_deauth() prevents R from trying to authenticate via a browser
+## This is needed to make the GitHub Action work
+drive_deauth()
+file_link <- "https://drive.google.com/file/d/1wrbshfXqKl2B9aKwj6L0_w5sm4GmC2PC/view"
+
+## All data up until now
+new_data <- updateData(file_link)
+
+## Include only most recent data
+most_recent_data <- new_data %>%
+  group_by(PatientID) %>%
+  filter(obsTime == max(obsTime))
+```
+
+All reports should include, at minimum:
+
+#### The date and time of the report
+
+```{r, echo=FALSE}
+time <-ymd_hms(Sys.time())
+(string <- str_glue("Hello! The last time the report was run: {time}"))
+```
+
+#### Recent heart rate, temperature, and respiratory rate for patients who currently have sepsis
+
+```{r}
+table1 <- most_recent_data %>%
+  filter(SepsisLabel == 1) %>%
+  select(c(PatientID, HR, Temp, Resp, obsTime)) %>%
+  ungroup() %>%
+  gt() %>%
+  cols_label(Temp = "Temperature",
+             HR = "Heart Rate",
+             Resp = "Respiration",
+             obsTime = "Last Update") %>%
+  tab_header(title = "Most recent vital signs for Septic Patients")
+
+table1
+
+```
+
+
+#### Plots for all patients who have sepsis that show the complete history of their heart rate, temperature, and respiratory rate during their time in the ICU.
+
+```{r, warning=FALSE}
+filtered_sepsis <- new_data %>%
+group_by(PatientID) %>%
+  mutate(any_sepsis = ifelse(any(SepsisLabel == 1), 1, 0)) %>%
+  filter(any_sepsis == 1) 
+
+patient_ids <- unique(filtered_sepsis$PatientID)
+
+for (i in patient_ids) {
+  patient_data <- filtered_sepsis %>% filter(PatientID == i)
+  
+  if (nrow(patient_data) > 0) {
+    p <-ggplot(patient_data, aes(x = obsTime, y = HR)) +
+      geom_point(color = "red") +
+      geom_line(color= "red") + 
+      ggtitle(paste("HR History for Patient ID:", i)) +
+      theme_minimal()
+    
+    print(p)
+  }
+} 
+
+for (i in patient_ids) {
+  patient_data <- filtered_sepsis %>% filter(PatientID == i)
+  
+  if (nrow(patient_data) > 0) {
+    t <-ggplot(patient_data, aes(x = obsTime, y = Temp)) +
+      geom_point(color = "darkgreen") +
+      geom_line(color= "darkgreen") + 
+      ggtitle(paste("Temp History for Patient ID:", i)) +
+      theme_minimal()
+    
+    print(t)
+  }
+}
+
+for (i in patient_ids) {
+  patient_data <- filtered_sepsis %>% filter(PatientID == i)
+if(nrow(patient_data) >0){
+    r <-ggplot(patient_data, aes(x=obsTime, y= Resp)) +
+      geom_point(color= "lightblue") +
+      geom_line(color = "lightblue") +
+      ggtitle(paste("Resp History for Patient ID:", i)) +
+      theme_minimal()
+    print(r)
+  }
+}
+  
+```
+
+
+#### A table showing the change in heart rate, temperature, and respiratory rate between the last two measurements for all patients
+
+
+```{r}
+new_data %>%
+  group_by(PatientID) %>%
+  arrange(obsTime, .by_group = TRUE, desc=TRUE) %>%
+  slice_max(n=2, order_by=obsTime) %>%
+mutate(prev_HR = lag(HR, order_by = obsTime),
+         HR_change = (HR- prev_HR),
+         prev_resp = lag(Resp, order_by = obsTime),
+         Resp_change = (Resp - prev_resp),
+         prev_temp = lag(Temp, order_by = obsTime),
+         temp_change = (Temp - prev_temp)) %>%
+  select(PatientID, HR_change, temp_change, Resp_change) %>%
+  ungroup() %>%
+  gt()
+
+```
