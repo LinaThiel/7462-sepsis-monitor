@@ -43,6 +43,7 @@ jobs:
                any::tidyverse
                any::kableExtra
                any::tibble
+               any::data.table
 
 
       - name: Render document
