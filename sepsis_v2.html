@@ -135,12 +135,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h4 class="anchored" data-anchor-id="the-date-and-time-of-the-report">The date and time of the report</h4>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>Hello! The last time the report was run: 2023-04-07 19:56:33</code></pre>
+<pre><code>Hello! The last time the report was run: 2023-04-07 22:07:37</code></pre>
 </div>
 </div>
 </section>
 <section id="recent-heart-rate-temperature-and-respiratory-rate-for-patients-who-currently-have-sepsis" class="level4">
-<h4 class="anchored" data-anchor-id="recent-heart-rate-temperature-and-respiratory-rate-for-patients-who-currently-have-sepsis">Recent heart rate, temperature, and respiratory rate for patients who <em>currently have sepsis</em></h4>
+<h4 class="anchored" data-anchor-id="recent-heart-rate-temperature-and-respiratory-rate-for-patients-who-currently-have-sepsis">Recent heart rate, temperature, and respiratory rate for patients who currently have sepsis</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">nrow</span>(septic_data) <span class="sc">&gt;=</span><span class="dv">1</span>){</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>table1 <span class="ot">&lt;-</span> most_recent_data <span class="sc">%&gt;%</span></span>
@@ -164,7 +164,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </section>
 <section id="plots-for-all-patients-who-have-sepsis-that-show-the-complete-history-of-their-heart-rate-temperature-and-respiratory-rate-during-their-time-in-the-icu." class="level4">
-<h4 class="anchored" data-anchor-id="plots-for-all-patients-who-have-sepsis-that-show-the-complete-history-of-their-heart-rate-temperature-and-respiratory-rate-during-their-time-in-the-icu.">Plots for all patients who <em>have sepsis</em> that show the complete history of their heart rate, temperature, and respiratory rate during their time in the ICU.</h4>
+<h4 class="anchored" data-anchor-id="plots-for-all-patients-who-have-sepsis-that-show-the-complete-history-of-their-heart-rate-temperature-and-respiratory-rate-during-their-time-in-the-icu.">Plots for all patients who have sepsis that show the complete history of their heart rate, temperature, and respiratory rate during their time in the ICU.</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>filtered_sepsis <span class="ot">&lt;-</span> new_data <span class="sc">%&gt;%</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(PatientID) <span class="sc">%&gt;%</span></span>
@@ -223,7 +223,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </section>
 <section id="a-table-showing-the-change-in-heart-rate-temperature-and-respiratory-rate-between-the-last-two-measurements-for-all-patients" class="level4">
-<h4 class="anchored" data-anchor-id="a-table-showing-the-change-in-heart-rate-temperature-and-respiratory-rate-between-the-last-two-measurements-for-all-patients">A table showing the change in heart rate, temperature, and respiratory rate between the last two measurements for <em>all patients</em></h4>
+<h4 class="anchored" data-anchor-id="a-table-showing-the-change-in-heart-rate-temperature-and-respiratory-rate-between-the-last-two-measurements-for-all-patients">A table showing the change in heart rate, temperature, and respiratory rate between the last two measurements for all patients</h4>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>new_data <span class="sc">%&gt;%</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(PatientID) <span class="sc">%&gt;%</span></span>
@@ -237,764 +237,614 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">temp_change =</span> (Temp <span class="sc">-</span> prev_temp)) <span class="sc">%&gt;%</span></span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(PatientID, HR_change, temp_change, Resp_change) <span class="sc">%&gt;%</span></span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-
-<div id="jwhfaauume" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
-}
-
-:where(#jwhfaauume) .gt_table {
-  display: table;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-:where(#jwhfaauume) .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-:where(#jwhfaauume) .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-:where(#jwhfaauume) .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-:where(#jwhfaauume) .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-:where(#jwhfaauume) .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-:where(#jwhfaauume) .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-:where(#jwhfaauume) .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-:where(#jwhfaauume) .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-:where(#jwhfaauume) .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-:where(#jwhfaauume) .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-:where(#jwhfaauume) .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-:where(#jwhfaauume) .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-:where(#jwhfaauume) .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-:where(#jwhfaauume) .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-:where(#jwhfaauume) .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-:where(#jwhfaauume) .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-:where(#jwhfaauume) .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-:where(#jwhfaauume) .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-:where(#jwhfaauume) .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-:where(#jwhfaauume) .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-:where(#jwhfaauume) .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-:where(#jwhfaauume) .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-:where(#jwhfaauume) .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-:where(#jwhfaauume) .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-:where(#jwhfaauume) .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-:where(#jwhfaauume) .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-:where(#jwhfaauume) .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-:where(#jwhfaauume) .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-:where(#jwhfaauume) .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-:where(#jwhfaauume) .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-:where(#jwhfaauume) .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-:where(#jwhfaauume) .gt_left {
-  text-align: left;
-}
-
-:where(#jwhfaauume) .gt_center {
-  text-align: center;
-}
-
-:where(#jwhfaauume) .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-:where(#jwhfaauume) .gt_font_normal {
-  font-weight: normal;
-}
-
-:where(#jwhfaauume) .gt_font_bold {
-  font-weight: bold;
-}
-
-:where(#jwhfaauume) .gt_font_italic {
-  font-style: italic;
-}
-
-:where(#jwhfaauume) .gt_super {
-  font-size: 65%;
-}
-
-:where(#jwhfaauume) .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
-  font-size: 75%;
-  vertical-align: 0.4em;
-}
-
-:where(#jwhfaauume) .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-:where(#jwhfaauume) .gt_indent_1 {
-  text-indent: 5px;
-}
-
-:where(#jwhfaauume) .gt_indent_2 {
-  text-indent: 10px;
-}
-
-:where(#jwhfaauume) .gt_indent_3 {
-  text-indent: 15px;
-}
-
-:where(#jwhfaauume) .gt_indent_4 {
-  text-indent: 20px;
-}
-
-:where(#jwhfaauume) .gt_indent_5 {
-  text-indent: 25px;
-}
-</style>
-<table class="gt_table">
-  
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="PatientID">PatientID</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="HR_change">HR_change</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="temp_change">temp_change</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Resp_change">Resp_change</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td headers="PatientID" class="gt_row gt_right">000003</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">000052</td>
-<td headers="HR_change" class="gt_row gt_right">3</td>
-<td headers="temp_change" class="gt_row gt_right">-0.15</td>
-<td headers="Resp_change" class="gt_row gt_right">0</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">000052</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">000054</td>
-<td headers="HR_change" class="gt_row gt_right">5</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">6</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">000054</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">000057</td>
-<td headers="HR_change" class="gt_row gt_right">-17</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">3</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">000057</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">000122</td>
-<td headers="HR_change" class="gt_row gt_right">-5</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">-3</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">000122</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">000180</td>
-<td headers="HR_change" class="gt_row gt_right">-25</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">-1</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">000180</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">000315</td>
-<td headers="HR_change" class="gt_row gt_right">2</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">0</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">000315</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">000388</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">000714</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">001000</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">001258</td>
-<td headers="HR_change" class="gt_row gt_right">-14</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">-2</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">001258</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">001262</td>
-<td headers="HR_change" class="gt_row gt_right">5</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">0</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">001262</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">001286</td>
-<td headers="HR_change" class="gt_row gt_right">0</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">001286</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">001759</td>
-<td headers="HR_change" class="gt_row gt_right">11</td>
-<td headers="temp_change" class="gt_row gt_right">0.05</td>
-<td headers="Resp_change" class="gt_row gt_right">-2</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">001759</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">001948</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">002017</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">002077</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">002467</td>
-<td headers="HR_change" class="gt_row gt_right">5</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">4</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">002467</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">002516</td>
-<td headers="HR_change" class="gt_row gt_right">-1</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">2</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">002516</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">002699</td>
-<td headers="HR_change" class="gt_row gt_right">1</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">1</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">002699</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">002719</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">003342</td>
-<td headers="HR_change" class="gt_row gt_right">0</td>
-<td headers="temp_change" class="gt_row gt_right">-0.20</td>
-<td headers="Resp_change" class="gt_row gt_right">0</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">003342</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">003364</td>
-<td headers="HR_change" class="gt_row gt_right">4</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">4</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">003364</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">003404</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">003751</td>
-<td headers="HR_change" class="gt_row gt_right">-1</td>
-<td headers="temp_change" class="gt_row gt_right">-0.20</td>
-<td headers="Resp_change" class="gt_row gt_right">1</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">003751</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">003797</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">004370</td>
-<td headers="HR_change" class="gt_row gt_right">-6</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">8</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">004370</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">004842</td>
-<td headers="HR_change" class="gt_row gt_right">9</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">4</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">004842</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">005042</td>
-<td headers="HR_change" class="gt_row gt_right">-12</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">-10</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">005042</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">005496</td>
-<td headers="HR_change" class="gt_row gt_right">5</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">005496</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">006095</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">006095</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">006455</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">006455</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">006767</td>
-<td headers="HR_change" class="gt_row gt_right">-6</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">0</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">006767</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">006936</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">008226</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">008268</td>
-<td headers="HR_change" class="gt_row gt_right">-4</td>
-<td headers="temp_change" class="gt_row gt_right">-0.35</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">008268</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">008524</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">008524</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">008536</td>
-<td headers="HR_change" class="gt_row gt_right">0</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">17</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">008536</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">008574</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">008614</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">008803</td>
-<td headers="HR_change" class="gt_row gt_right">4</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">0</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">008803</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">008882</td>
-<td headers="HR_change" class="gt_row gt_right">1</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">4</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">008882</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">009312</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">009429</td>
-<td headers="HR_change" class="gt_row gt_right">-7</td>
-<td headers="temp_change" class="gt_row gt_right">-0.15</td>
-<td headers="Resp_change" class="gt_row gt_right">1</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">009429</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">009433</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">009454</td>
-<td headers="HR_change" class="gt_row gt_right">1</td>
-<td headers="temp_change" class="gt_row gt_right">0.72</td>
-<td headers="Resp_change" class="gt_row gt_right">-1</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">009454</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">009511</td>
-<td headers="HR_change" class="gt_row gt_right">-4</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">-3</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">009511</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">009657</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">009814</td>
-<td headers="HR_change" class="gt_row gt_right">3</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">1</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">009814</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-    <tr><td headers="PatientID" class="gt_row gt_right">009982</td>
-<td headers="HR_change" class="gt_row gt_right">NA</td>
-<td headers="temp_change" class="gt_row gt_right">NA</td>
-<td headers="Resp_change" class="gt_row gt_right">NA</td></tr>
-  </tbody>
-  
-  
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: left;">PatientID</th>
+<th style="text-align: right;">HR_change</th>
+<th style="text-align: right;">temp_change</th>
+<th style="text-align: right;">Resp_change</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">000003</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.28</td>
+<td style="text-align: right;">-2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">000003</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">000052</td>
+<td style="text-align: right;">-8</td>
+<td style="text-align: right;">0.45</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">000052</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">000054</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">000054</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">000057</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">000057</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">000122</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">000122</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">000180</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">000180</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">000315</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">000315</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">000388</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">000388</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">000714</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">000714</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">001000</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">-0.50</td>
+<td style="text-align: right;">-2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">001000</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">001258</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">001258</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">001262</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">001262</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">001286</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">001286</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">001759</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">001759</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">001948</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">001948</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">002017</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">002017</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">002077</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">002077</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">002467</td>
+<td style="text-align: right;">-7</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">002467</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">002516</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">002516</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">002699</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">002699</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">002719</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-0.60</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">002719</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">003342</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-0.15</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">003342</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">003364</td>
+<td style="text-align: right;">-14</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">003364</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">003404</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">003751</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-0.10</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">003751</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">003797</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.10</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">003797</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">004370</td>
+<td style="text-align: right;">-10</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">004370</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">004842</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">004842</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">005042</td>
+<td style="text-align: right;">-12</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">005042</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">005496</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">005496</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">006095</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">006095</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">006455</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">006455</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">006767</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">006767</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">006936</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">006936</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">008226</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.20</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">008226</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">008268</td>
+<td style="text-align: right;">-12</td>
+<td style="text-align: right;">-0.80</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">008268</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">008524</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">008524</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">008536</td>
+<td style="text-align: right;">-15</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">008536</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">008574</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">008574</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">008614</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">008614</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">008803</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">008803</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">008882</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">008882</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">009312</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">009312</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">009429</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">009429</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">009433</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">009433</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">009454</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.72</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">009454</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">009511</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">009511</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">009657</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">009657</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">009814</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">009814</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">009982</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">009982</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
 </table>
-</div>
 </div>
 </div>
 </section>

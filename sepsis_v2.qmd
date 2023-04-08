@@ -12,6 +12,7 @@ library(googledrive)
 library(tictoc)
 library(tidyverse)
 library(data.table)
+library(knitr)
 
 source("sepsis_monitor_functions.R")
 ```
@@ -207,6 +208,6 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
          temp_change = (Temp - prev_temp)) %>%
   select(PatientID, HR_change, temp_change, Resp_change) %>%
   ungroup() %>%
-  gt()
+  knitr::kable()
 
 ```
