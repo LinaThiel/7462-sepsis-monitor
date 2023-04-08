@@ -1,5 +1,5 @@
 ---
-title: "sepsis_assignment_v2"
+title: "Sepsis Assignment"
 format: html
 editor: visual
 ---
@@ -62,9 +62,9 @@ tictoc:: toc()
 #90.07 seconds
 ```
 
+```{r, include=FALSE, eval=FALSE}
 
-```{r, include=FALSE, ECHO=FALSE}
-
+#Loading in data set but don't want to repeat it after the first time it's run
 library(googledrive)
 
 df <- makeSepsisDataset()
@@ -96,9 +96,9 @@ new_data <- updateData(file_link)
 most_recent_data <- new_data %>%
   group_by(PatientID) %>%
   filter(obsTime == max(obsTime))
-```
+  
 
-All reports should include, at minimum:
+```
 
 #### The date and time of the report
 
@@ -107,9 +107,15 @@ time <-ymd_hms(Sys.time())
 (string <- str_glue("Hello! The last time the report was run: {time}"))
 ```
 
-#### Recent heart rate, temperature, and respiratory rate for patients who currently have sepsis
+```{r, include=FALSE, echo=FALSE}
+septic_data <- most_recent_data %>%
+  filter(SepsisLabel == 1) 
+```
+
+#### Recent heart rate, temperature, and respiratory rate for patients who *currently have sepsis*
 
 ```{r}
+if(nrow(septic_data) >=1){
 table1 <- most_recent_data %>%
   filter(SepsisLabel == 1) %>%
   select(c(PatientID, HR, Temp, Resp, obsTime)) %>%
@@ -122,11 +128,13 @@ table1 <- most_recent_data %>%
   tab_header(title = "Most recent vital signs for Septic Patients")
 
 table1
+} else{
+  print("Hooray, no septic patients to report")
+}
 
 ```
 
-
-#### Plots for all patients who have sepsis that show the complete history of their heart rate, temperature, and respiratory rate during their time in the ICU.
+#### Plots for all patients who *have sepsis* that show the complete history of their heart rate, temperature, and respiratory rate during their time in the ICU.
 
 ```{r, warning=FALSE}
 filtered_sepsis <- new_data %>%
@@ -134,8 +142,10 @@ group_by(PatientID) %>%
   mutate(any_sepsis = ifelse(any(SepsisLabel == 1), 1, 0)) %>%
   filter(any_sepsis == 1) 
 
-patient_ids <- unique(filtered_sepsis$PatientID)
 
+patient_ids <- unique(filtered_sepsis$PatientID)
+if(nrow(filtered_sepsis)>=1) {
+  
 for (i in patient_ids) {
   patient_data <- filtered_sepsis %>% filter(PatientID == i)
   
@@ -175,12 +185,13 @@ if(nrow(patient_data) >0){
     print(r)
   }
 }
-  
+} else{
+  print("Hooray, no septic patients to graph")
+}
+
 ```
 
-
-#### A table showing the change in heart rate, temperature, and respiratory rate between the last two measurements for all patients
-
+#### A table showing the change in heart rate, temperature, and respiratory rate between the last two measurements for *all patients*
 
 ```{r}
 new_data %>%
