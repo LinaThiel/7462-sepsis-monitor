@@ -29,7 +29,7 @@ jobs:
       - name: Install packages
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-            packages:
+              packages:
                any::knitr
                any::rmarkdown
                any::jsonlite
@@ -38,6 +38,12 @@ jobs:
                any::readr
                any::lubridate
                any::forcats
+               any::googledrive
+               any::gt
+               any::tidyverse
+               any::kableExtra
+               any::tibble
+
 
       - name: Render document
         uses: quarto-dev/quarto-actions/render@v2
