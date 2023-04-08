@@ -5,7 +5,7 @@ editor: visual
 ---
 
 ```{r, echo=FALSE, include= FALSE}
-library(tidyverse)
+library(dplyr)
 library(data.table) ## For the fread function
 library(lubridate)
 library(gt)
