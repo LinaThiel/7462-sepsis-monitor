@@ -112,7 +112,7 @@ septic_data <- most_recent_data %>%
   filter(SepsisLabel == 1) 
 ```
 
-#### Recent heart rate, temperature, and respiratory rate for patients who *currently have sepsis*
+#### Recent heart rate, temperature, and respiratory rate for patients who currently have sepsis
 
 ```{r}
 if(nrow(septic_data) >=1){
@@ -134,7 +134,7 @@ table1
 
 ```
 
-#### Plots for all patients who *have sepsis* that show the complete history of their heart rate, temperature, and respiratory rate during their time in the ICU.
+#### Plots for all patients who have sepsis that show the complete history of their heart rate, temperature, and respiratory rate during their time in the ICU.
 
 ```{r, warning=FALSE}
 filtered_sepsis <- new_data %>%
@@ -191,7 +191,7 @@ if(nrow(patient_data) >0){
 
 ```
 
-#### A table showing the change in heart rate, temperature, and respiratory rate between the last two measurements for *all patients*
+#### A table showing the change in heart rate, temperature, and respiratory rate between the last two measurements for all patients
 
 ```{r}
 new_data %>%
