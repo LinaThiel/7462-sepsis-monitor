@@ -10,6 +10,7 @@ library(lubridate)
 library(gt)
 library(googledrive)
 library(tictoc)
+library(tidyverse)
 
 source("sepsis_monitor_functions.R")
 ```
