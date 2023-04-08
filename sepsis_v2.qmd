@@ -6,7 +6,6 @@ editor: visual
 
 ```{r, echo=FALSE, include= FALSE}
 library(dplyr)
-library(data.table) ## For the fread function
 library(lubridate)
 library(gt)
 library(googledrive)
