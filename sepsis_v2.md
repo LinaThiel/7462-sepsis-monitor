@@ -10,7 +10,7 @@ Sepsis Assignment
 
 #### The date and time of the report
 
-    Hello! The last time the report was run: 2023-04-09 17:12:13
+    Hello! The last time the report was run: 2023-04-09 18:16:15
 
 #### Recent heart rate, temperature, and respiratory rate for patients who currently have sepsis
 
@@ -33,23 +33,23 @@ table1
 }
 ```
 
-<div id="bwcfdqdmwm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#bwcfdqdmwm table {
+<div id="xebjpxqvmi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xebjpxqvmi table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#bwcfdqdmwm thead, #bwcfdqdmwm tbody, #bwcfdqdmwm tfoot, #bwcfdqdmwm tr, #bwcfdqdmwm td, #bwcfdqdmwm th {
+#xebjpxqvmi thead, #xebjpxqvmi tbody, #xebjpxqvmi tfoot, #xebjpxqvmi tr, #xebjpxqvmi td, #xebjpxqvmi th {
   border-style: none;
 }
 
-#bwcfdqdmwm p {
+#xebjpxqvmi p {
   margin: 0;
   padding: 0;
 }
 
-#bwcfdqdmwm .gt_table {
+#xebjpxqvmi .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -75,12 +75,12 @@ table1
   border-left-color: #D3D3D3;
 }
 
-#bwcfdqdmwm .gt_caption {
+#xebjpxqvmi .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#bwcfdqdmwm .gt_title {
+#xebjpxqvmi .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -92,7 +92,7 @@ table1
   border-bottom-width: 0;
 }
 
-#bwcfdqdmwm .gt_subtitle {
+#xebjpxqvmi .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -104,7 +104,7 @@ table1
   border-top-width: 0;
 }
 
-#bwcfdqdmwm .gt_heading {
+#xebjpxqvmi .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -116,13 +116,13 @@ table1
   border-right-color: #D3D3D3;
 }
 
-#bwcfdqdmwm .gt_bottom_border {
+#xebjpxqvmi .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bwcfdqdmwm .gt_col_headings {
+#xebjpxqvmi .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -137,7 +137,7 @@ table1
   border-right-color: #D3D3D3;
 }
 
-#bwcfdqdmwm .gt_col_heading {
+#xebjpxqvmi .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -157,7 +157,7 @@ table1
   overflow-x: hidden;
 }
 
-#bwcfdqdmwm .gt_column_spanner_outer {
+#xebjpxqvmi .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -169,15 +169,15 @@ table1
   padding-right: 4px;
 }
 
-#bwcfdqdmwm .gt_column_spanner_outer:first-child {
+#xebjpxqvmi .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bwcfdqdmwm .gt_column_spanner_outer:last-child {
+#xebjpxqvmi .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bwcfdqdmwm .gt_column_spanner {
+#xebjpxqvmi .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -189,11 +189,11 @@ table1
   width: 100%;
 }
 
-#bwcfdqdmwm .gt_spanner_row {
+#xebjpxqvmi .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#bwcfdqdmwm .gt_group_heading {
+#xebjpxqvmi .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -219,7 +219,7 @@ table1
   text-align: left;
 }
 
-#bwcfdqdmwm .gt_empty_group_heading {
+#xebjpxqvmi .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -234,15 +234,15 @@ table1
   vertical-align: middle;
 }
 
-#bwcfdqdmwm .gt_from_md > :first-child {
+#xebjpxqvmi .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bwcfdqdmwm .gt_from_md > :last-child {
+#xebjpxqvmi .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bwcfdqdmwm .gt_row {
+#xebjpxqvmi .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -261,7 +261,7 @@ table1
   overflow-x: hidden;
 }
 
-#bwcfdqdmwm .gt_stub {
+#xebjpxqvmi .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -274,7 +274,7 @@ table1
   padding-right: 5px;
 }
 
-#bwcfdqdmwm .gt_stub_row_group {
+#xebjpxqvmi .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -288,15 +288,15 @@ table1
   vertical-align: top;
 }
 
-#bwcfdqdmwm .gt_row_group_first td {
+#xebjpxqvmi .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#bwcfdqdmwm .gt_row_group_first th {
+#xebjpxqvmi .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#bwcfdqdmwm .gt_summary_row {
+#xebjpxqvmi .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -306,16 +306,16 @@ table1
   padding-right: 5px;
 }
 
-#bwcfdqdmwm .gt_first_summary_row {
+#xebjpxqvmi .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#bwcfdqdmwm .gt_first_summary_row.thick {
+#xebjpxqvmi .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#bwcfdqdmwm .gt_last_summary_row {
+#xebjpxqvmi .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -325,7 +325,7 @@ table1
   border-bottom-color: #D3D3D3;
 }
 
-#bwcfdqdmwm .gt_grand_summary_row {
+#xebjpxqvmi .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -335,7 +335,7 @@ table1
   padding-right: 5px;
 }
 
-#bwcfdqdmwm .gt_first_grand_summary_row {
+#xebjpxqvmi .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -345,7 +345,7 @@ table1
   border-top-color: #D3D3D3;
 }
 
-#bwcfdqdmwm .gt_last_grand_summary_row_top {
+#xebjpxqvmi .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -355,11 +355,11 @@ table1
   border-bottom-color: #D3D3D3;
 }
 
-#bwcfdqdmwm .gt_striped {
+#xebjpxqvmi .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bwcfdqdmwm .gt_table_body {
+#xebjpxqvmi .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -368,7 +368,7 @@ table1
   border-bottom-color: #D3D3D3;
 }
 
-#bwcfdqdmwm .gt_footnotes {
+#xebjpxqvmi .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -382,7 +382,7 @@ table1
   border-right-color: #D3D3D3;
 }
 
-#bwcfdqdmwm .gt_footnote {
+#xebjpxqvmi .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -391,7 +391,7 @@ table1
   padding-right: 5px;
 }
 
-#bwcfdqdmwm .gt_sourcenotes {
+#xebjpxqvmi .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -405,7 +405,7 @@ table1
   border-right-color: #D3D3D3;
 }
 
-#bwcfdqdmwm .gt_sourcenote {
+#xebjpxqvmi .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -413,63 +413,63 @@ table1
   padding-right: 5px;
 }
 
-#bwcfdqdmwm .gt_left {
+#xebjpxqvmi .gt_left {
   text-align: left;
 }
 
-#bwcfdqdmwm .gt_center {
+#xebjpxqvmi .gt_center {
   text-align: center;
 }
 
-#bwcfdqdmwm .gt_right {
+#xebjpxqvmi .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bwcfdqdmwm .gt_font_normal {
+#xebjpxqvmi .gt_font_normal {
   font-weight: normal;
 }
 
-#bwcfdqdmwm .gt_font_bold {
+#xebjpxqvmi .gt_font_bold {
   font-weight: bold;
 }
 
-#bwcfdqdmwm .gt_font_italic {
+#xebjpxqvmi .gt_font_italic {
   font-style: italic;
 }
 
-#bwcfdqdmwm .gt_super {
+#xebjpxqvmi .gt_super {
   font-size: 65%;
 }
 
-#bwcfdqdmwm .gt_footnote_marks {
+#xebjpxqvmi .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#bwcfdqdmwm .gt_asterisk {
+#xebjpxqvmi .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#bwcfdqdmwm .gt_indent_1 {
+#xebjpxqvmi .gt_indent_1 {
   text-indent: 5px;
 }
 
-#bwcfdqdmwm .gt_indent_2 {
+#xebjpxqvmi .gt_indent_2 {
   text-indent: 10px;
 }
 
-#bwcfdqdmwm .gt_indent_3 {
+#xebjpxqvmi .gt_indent_3 {
   text-indent: 15px;
 }
 
-#bwcfdqdmwm .gt_indent_4 {
+#xebjpxqvmi .gt_indent_4 {
   text-indent: 20px;
 }
 
-#bwcfdqdmwm .gt_indent_5 {
+#xebjpxqvmi .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -592,7 +592,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 
 | PatientID | HR_change | temp_change | Resp_change |
 |:----------|----------:|------------:|------------:|
-| 000003    |         0 |          NA |          -4 |
+| 000003    |         0 |          NA |           2 |
 | 000003    |        NA |          NA |          NA |
 | 000052    |        -1 |          NA |          -1 |
 | 000052    |        NA |          NA |          NA |
@@ -604,7 +604,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 000122    |        NA |          NA |          NA |
 | 000180    |         3 |          NA |           1 |
 | 000180    |        NA |          NA |          NA |
-| 000315    |         1 |          NA |          -6 |
+| 000315    |         5 |          NA |          -3 |
 | 000315    |        NA |          NA |          NA |
 | 000388    |         6 |          NA |           1 |
 | 000388    |        NA |          NA |          NA |
@@ -632,11 +632,11 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 002516    |        NA |          NA |          NA |
 | 002699    |         3 |          NA |           1 |
 | 002699    |        NA |          NA |          NA |
-| 002719    |        -1 |          NA |          -4 |
+| 002719    |        -9 |          NA |          -2 |
 | 002719    |        NA |          NA |          NA |
-| 003342    |        10 |          NA |          NA |
+| 003342    |         6 |          NA |           4 |
 | 003342    |        NA |          NA |          NA |
-| 003364    |        -8 |          NA |          -5 |
+| 003364    |        -2 |          NA |          -1 |
 | 003364    |        NA |          NA |          NA |
 | 003404    |        NA |          NA |          NA |
 | 003404    |        NA |          NA |          NA |
@@ -656,7 +656,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 006095    |        NA |          NA |          NA |
 | 006455    |        NA |          NA |          NA |
 | 006455    |        NA |          NA |          NA |
-| 006767    |        15 |          NA |          -3 |
+| 006767    |        NA |          NA |          NA |
 | 006767    |        NA |          NA |          NA |
 | 006936    |        -6 |          NA |          NA |
 | 006936    |        NA |          NA |          NA |
@@ -664,7 +664,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 008226    |        NA |          NA |          NA |
 | 008268    |        17 |       -0.50 |          11 |
 | 008268    |        NA |          NA |          NA |
-| 008524    |         6 |          NA |           1 |
+| 008524    |         0 |          NA |          -3 |
 | 008524    |        NA |          NA |          NA |
 | 008536    |        NA |          NA |          NA |
 | 008536    |        NA |          NA |          NA |
@@ -678,7 +678,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 008882    |        NA |          NA |          NA |
 | 009312    |        -6 |          NA |           6 |
 | 009312    |        NA |          NA |          NA |
-| 009429    |         0 |          NA |          -1 |
+| 009429    |        NA |          NA |           6 |
 | 009429    |        NA |          NA |          NA |
 | 009433    |        -7 |          NA |          -1 |
 | 009433    |        NA |          NA |          NA |
