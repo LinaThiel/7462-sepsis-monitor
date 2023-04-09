@@ -10,7 +10,7 @@ Sepsis Assignment
 
 #### The date and time of the report
 
-    Hello! The last time the report was run: 2023-04-09 16:16:38
+    Hello! The last time the report was run: 2023-04-09 17:12:13
 
 #### Recent heart rate, temperature, and respiratory rate for patients who currently have sepsis
 
@@ -33,23 +33,23 @@ table1
 }
 ```
 
-<div id="coxqvaedfh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#coxqvaedfh table {
+<div id="bwcfdqdmwm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bwcfdqdmwm table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#coxqvaedfh thead, #coxqvaedfh tbody, #coxqvaedfh tfoot, #coxqvaedfh tr, #coxqvaedfh td, #coxqvaedfh th {
+#bwcfdqdmwm thead, #bwcfdqdmwm tbody, #bwcfdqdmwm tfoot, #bwcfdqdmwm tr, #bwcfdqdmwm td, #bwcfdqdmwm th {
   border-style: none;
 }
 
-#coxqvaedfh p {
+#bwcfdqdmwm p {
   margin: 0;
   padding: 0;
 }
 
-#coxqvaedfh .gt_table {
+#bwcfdqdmwm .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -75,12 +75,12 @@ table1
   border-left-color: #D3D3D3;
 }
 
-#coxqvaedfh .gt_caption {
+#bwcfdqdmwm .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#coxqvaedfh .gt_title {
+#bwcfdqdmwm .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -92,7 +92,7 @@ table1
   border-bottom-width: 0;
 }
 
-#coxqvaedfh .gt_subtitle {
+#bwcfdqdmwm .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -104,7 +104,7 @@ table1
   border-top-width: 0;
 }
 
-#coxqvaedfh .gt_heading {
+#bwcfdqdmwm .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -116,13 +116,13 @@ table1
   border-right-color: #D3D3D3;
 }
 
-#coxqvaedfh .gt_bottom_border {
+#bwcfdqdmwm .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#coxqvaedfh .gt_col_headings {
+#bwcfdqdmwm .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -137,7 +137,7 @@ table1
   border-right-color: #D3D3D3;
 }
 
-#coxqvaedfh .gt_col_heading {
+#bwcfdqdmwm .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -157,7 +157,7 @@ table1
   overflow-x: hidden;
 }
 
-#coxqvaedfh .gt_column_spanner_outer {
+#bwcfdqdmwm .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -169,15 +169,15 @@ table1
   padding-right: 4px;
 }
 
-#coxqvaedfh .gt_column_spanner_outer:first-child {
+#bwcfdqdmwm .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#coxqvaedfh .gt_column_spanner_outer:last-child {
+#bwcfdqdmwm .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#coxqvaedfh .gt_column_spanner {
+#bwcfdqdmwm .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -189,11 +189,11 @@ table1
   width: 100%;
 }
 
-#coxqvaedfh .gt_spanner_row {
+#bwcfdqdmwm .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#coxqvaedfh .gt_group_heading {
+#bwcfdqdmwm .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -219,7 +219,7 @@ table1
   text-align: left;
 }
 
-#coxqvaedfh .gt_empty_group_heading {
+#bwcfdqdmwm .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -234,15 +234,15 @@ table1
   vertical-align: middle;
 }
 
-#coxqvaedfh .gt_from_md > :first-child {
+#bwcfdqdmwm .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#coxqvaedfh .gt_from_md > :last-child {
+#bwcfdqdmwm .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#coxqvaedfh .gt_row {
+#bwcfdqdmwm .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -261,7 +261,7 @@ table1
   overflow-x: hidden;
 }
 
-#coxqvaedfh .gt_stub {
+#bwcfdqdmwm .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -274,7 +274,7 @@ table1
   padding-right: 5px;
 }
 
-#coxqvaedfh .gt_stub_row_group {
+#bwcfdqdmwm .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -288,15 +288,15 @@ table1
   vertical-align: top;
 }
 
-#coxqvaedfh .gt_row_group_first td {
+#bwcfdqdmwm .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#coxqvaedfh .gt_row_group_first th {
+#bwcfdqdmwm .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#coxqvaedfh .gt_summary_row {
+#bwcfdqdmwm .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -306,16 +306,16 @@ table1
   padding-right: 5px;
 }
 
-#coxqvaedfh .gt_first_summary_row {
+#bwcfdqdmwm .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#coxqvaedfh .gt_first_summary_row.thick {
+#bwcfdqdmwm .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#coxqvaedfh .gt_last_summary_row {
+#bwcfdqdmwm .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -325,7 +325,7 @@ table1
   border-bottom-color: #D3D3D3;
 }
 
-#coxqvaedfh .gt_grand_summary_row {
+#bwcfdqdmwm .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -335,7 +335,7 @@ table1
   padding-right: 5px;
 }
 
-#coxqvaedfh .gt_first_grand_summary_row {
+#bwcfdqdmwm .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -345,7 +345,7 @@ table1
   border-top-color: #D3D3D3;
 }
 
-#coxqvaedfh .gt_last_grand_summary_row_top {
+#bwcfdqdmwm .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -355,11 +355,11 @@ table1
   border-bottom-color: #D3D3D3;
 }
 
-#coxqvaedfh .gt_striped {
+#bwcfdqdmwm .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#coxqvaedfh .gt_table_body {
+#bwcfdqdmwm .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -368,7 +368,7 @@ table1
   border-bottom-color: #D3D3D3;
 }
 
-#coxqvaedfh .gt_footnotes {
+#bwcfdqdmwm .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -382,7 +382,7 @@ table1
   border-right-color: #D3D3D3;
 }
 
-#coxqvaedfh .gt_footnote {
+#bwcfdqdmwm .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -391,7 +391,7 @@ table1
   padding-right: 5px;
 }
 
-#coxqvaedfh .gt_sourcenotes {
+#bwcfdqdmwm .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -405,7 +405,7 @@ table1
   border-right-color: #D3D3D3;
 }
 
-#coxqvaedfh .gt_sourcenote {
+#bwcfdqdmwm .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -413,63 +413,63 @@ table1
   padding-right: 5px;
 }
 
-#coxqvaedfh .gt_left {
+#bwcfdqdmwm .gt_left {
   text-align: left;
 }
 
-#coxqvaedfh .gt_center {
+#bwcfdqdmwm .gt_center {
   text-align: center;
 }
 
-#coxqvaedfh .gt_right {
+#bwcfdqdmwm .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#coxqvaedfh .gt_font_normal {
+#bwcfdqdmwm .gt_font_normal {
   font-weight: normal;
 }
 
-#coxqvaedfh .gt_font_bold {
+#bwcfdqdmwm .gt_font_bold {
   font-weight: bold;
 }
 
-#coxqvaedfh .gt_font_italic {
+#bwcfdqdmwm .gt_font_italic {
   font-style: italic;
 }
 
-#coxqvaedfh .gt_super {
+#bwcfdqdmwm .gt_super {
   font-size: 65%;
 }
 
-#coxqvaedfh .gt_footnote_marks {
+#bwcfdqdmwm .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#coxqvaedfh .gt_asterisk {
+#bwcfdqdmwm .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#coxqvaedfh .gt_indent_1 {
+#bwcfdqdmwm .gt_indent_1 {
   text-indent: 5px;
 }
 
-#coxqvaedfh .gt_indent_2 {
+#bwcfdqdmwm .gt_indent_2 {
   text-indent: 10px;
 }
 
-#coxqvaedfh .gt_indent_3 {
+#bwcfdqdmwm .gt_indent_3 {
   text-indent: 15px;
 }
 
-#coxqvaedfh .gt_indent_4 {
+#bwcfdqdmwm .gt_indent_4 {
   text-indent: 20px;
 }
 
-#coxqvaedfh .gt_indent_5 {
+#bwcfdqdmwm .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -604,7 +604,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 000122    |        NA |          NA |          NA |
 | 000180    |         3 |          NA |           1 |
 | 000180    |        NA |          NA |          NA |
-| 000315    |         0 |          NA |          14 |
+| 000315    |         1 |          NA |          -6 |
 | 000315    |        NA |          NA |          NA |
 | 000388    |         6 |          NA |           1 |
 | 000388    |        NA |          NA |          NA |
@@ -614,7 +614,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 001000    |        NA |          NA |          NA |
 | 001258    |        -4 |          NA |           1 |
 | 001258    |        NA |          NA |          NA |
-| 001262    |        -5 |          NA |           3 |
+| 001262    |        -1 |          NA |          -3 |
 | 001262    |        NA |          NA |          NA |
 | 001286    |        NA |          NA |          NA |
 | 001286    |        NA |          NA |          NA |
@@ -632,9 +632,9 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 002516    |        NA |          NA |          NA |
 | 002699    |         3 |          NA |           1 |
 | 002699    |        NA |          NA |          NA |
-| 002719    |         0 |          NA |          -2 |
+| 002719    |        -1 |          NA |          -4 |
 | 002719    |        NA |          NA |          NA |
-| 003342    |         5 |          NA |          NA |
+| 003342    |        10 |          NA |          NA |
 | 003342    |        NA |          NA |          NA |
 | 003364    |        -8 |          NA |          -5 |
 | 003364    |        NA |          NA |          NA |
@@ -678,9 +678,9 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 008882    |        NA |          NA |          NA |
 | 009312    |        -6 |          NA |           6 |
 | 009312    |        NA |          NA |          NA |
-| 009429    |        -4 |          NA |           3 |
+| 009429    |         0 |          NA |          -1 |
 | 009429    |        NA |          NA |          NA |
-| 009433    |         0 |          NA |           1 |
+| 009433    |        -7 |          NA |          -1 |
 | 009433    |        NA |          NA |          NA |
 | 009454    |        -3 |          NA |          -9 |
 | 009454    |        NA |          NA |          NA |
