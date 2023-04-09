@@ -10,7 +10,7 @@ Sepsis Assignment
 
 #### The date and time of the report
 
-    Hello! The last time the report was run: 2023-04-09 22:12:10
+    Hello! The last time the report was run: 2023-04-09 23:13:17
 
 #### Recent heart rate, temperature, and respiratory rate for patients who currently have sepsis
 
@@ -33,23 +33,23 @@ table1
 }
 ```
 
-<div id="voonvzcylc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#voonvzcylc table {
+<div id="xtonvvgxts" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xtonvvgxts table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#voonvzcylc thead, #voonvzcylc tbody, #voonvzcylc tfoot, #voonvzcylc tr, #voonvzcylc td, #voonvzcylc th {
+#xtonvvgxts thead, #xtonvvgxts tbody, #xtonvvgxts tfoot, #xtonvvgxts tr, #xtonvvgxts td, #xtonvvgxts th {
   border-style: none;
 }
 
-#voonvzcylc p {
+#xtonvvgxts p {
   margin: 0;
   padding: 0;
 }
 
-#voonvzcylc .gt_table {
+#xtonvvgxts .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -75,12 +75,12 @@ table1
   border-left-color: #D3D3D3;
 }
 
-#voonvzcylc .gt_caption {
+#xtonvvgxts .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#voonvzcylc .gt_title {
+#xtonvvgxts .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -92,7 +92,7 @@ table1
   border-bottom-width: 0;
 }
 
-#voonvzcylc .gt_subtitle {
+#xtonvvgxts .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -104,7 +104,7 @@ table1
   border-top-width: 0;
 }
 
-#voonvzcylc .gt_heading {
+#xtonvvgxts .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -116,13 +116,13 @@ table1
   border-right-color: #D3D3D3;
 }
 
-#voonvzcylc .gt_bottom_border {
+#xtonvvgxts .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#voonvzcylc .gt_col_headings {
+#xtonvvgxts .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -137,7 +137,7 @@ table1
   border-right-color: #D3D3D3;
 }
 
-#voonvzcylc .gt_col_heading {
+#xtonvvgxts .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -157,7 +157,7 @@ table1
   overflow-x: hidden;
 }
 
-#voonvzcylc .gt_column_spanner_outer {
+#xtonvvgxts .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -169,15 +169,15 @@ table1
   padding-right: 4px;
 }
 
-#voonvzcylc .gt_column_spanner_outer:first-child {
+#xtonvvgxts .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#voonvzcylc .gt_column_spanner_outer:last-child {
+#xtonvvgxts .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#voonvzcylc .gt_column_spanner {
+#xtonvvgxts .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -189,11 +189,11 @@ table1
   width: 100%;
 }
 
-#voonvzcylc .gt_spanner_row {
+#xtonvvgxts .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#voonvzcylc .gt_group_heading {
+#xtonvvgxts .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -219,7 +219,7 @@ table1
   text-align: left;
 }
 
-#voonvzcylc .gt_empty_group_heading {
+#xtonvvgxts .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -234,15 +234,15 @@ table1
   vertical-align: middle;
 }
 
-#voonvzcylc .gt_from_md > :first-child {
+#xtonvvgxts .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#voonvzcylc .gt_from_md > :last-child {
+#xtonvvgxts .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#voonvzcylc .gt_row {
+#xtonvvgxts .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -261,7 +261,7 @@ table1
   overflow-x: hidden;
 }
 
-#voonvzcylc .gt_stub {
+#xtonvvgxts .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -274,7 +274,7 @@ table1
   padding-right: 5px;
 }
 
-#voonvzcylc .gt_stub_row_group {
+#xtonvvgxts .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -288,15 +288,15 @@ table1
   vertical-align: top;
 }
 
-#voonvzcylc .gt_row_group_first td {
+#xtonvvgxts .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#voonvzcylc .gt_row_group_first th {
+#xtonvvgxts .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#voonvzcylc .gt_summary_row {
+#xtonvvgxts .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -306,16 +306,16 @@ table1
   padding-right: 5px;
 }
 
-#voonvzcylc .gt_first_summary_row {
+#xtonvvgxts .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#voonvzcylc .gt_first_summary_row.thick {
+#xtonvvgxts .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#voonvzcylc .gt_last_summary_row {
+#xtonvvgxts .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -325,7 +325,7 @@ table1
   border-bottom-color: #D3D3D3;
 }
 
-#voonvzcylc .gt_grand_summary_row {
+#xtonvvgxts .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -335,7 +335,7 @@ table1
   padding-right: 5px;
 }
 
-#voonvzcylc .gt_first_grand_summary_row {
+#xtonvvgxts .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -345,7 +345,7 @@ table1
   border-top-color: #D3D3D3;
 }
 
-#voonvzcylc .gt_last_grand_summary_row_top {
+#xtonvvgxts .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -355,11 +355,11 @@ table1
   border-bottom-color: #D3D3D3;
 }
 
-#voonvzcylc .gt_striped {
+#xtonvvgxts .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#voonvzcylc .gt_table_body {
+#xtonvvgxts .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -368,7 +368,7 @@ table1
   border-bottom-color: #D3D3D3;
 }
 
-#voonvzcylc .gt_footnotes {
+#xtonvvgxts .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -382,7 +382,7 @@ table1
   border-right-color: #D3D3D3;
 }
 
-#voonvzcylc .gt_footnote {
+#xtonvvgxts .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -391,7 +391,7 @@ table1
   padding-right: 5px;
 }
 
-#voonvzcylc .gt_sourcenotes {
+#xtonvvgxts .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -405,7 +405,7 @@ table1
   border-right-color: #D3D3D3;
 }
 
-#voonvzcylc .gt_sourcenote {
+#xtonvvgxts .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -413,63 +413,63 @@ table1
   padding-right: 5px;
 }
 
-#voonvzcylc .gt_left {
+#xtonvvgxts .gt_left {
   text-align: left;
 }
 
-#voonvzcylc .gt_center {
+#xtonvvgxts .gt_center {
   text-align: center;
 }
 
-#voonvzcylc .gt_right {
+#xtonvvgxts .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#voonvzcylc .gt_font_normal {
+#xtonvvgxts .gt_font_normal {
   font-weight: normal;
 }
 
-#voonvzcylc .gt_font_bold {
+#xtonvvgxts .gt_font_bold {
   font-weight: bold;
 }
 
-#voonvzcylc .gt_font_italic {
+#xtonvvgxts .gt_font_italic {
   font-style: italic;
 }
 
-#voonvzcylc .gt_super {
+#xtonvvgxts .gt_super {
   font-size: 65%;
 }
 
-#voonvzcylc .gt_footnote_marks {
+#xtonvvgxts .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#voonvzcylc .gt_asterisk {
+#xtonvvgxts .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#voonvzcylc .gt_indent_1 {
+#xtonvvgxts .gt_indent_1 {
   text-indent: 5px;
 }
 
-#voonvzcylc .gt_indent_2 {
+#xtonvvgxts .gt_indent_2 {
   text-indent: 10px;
 }
 
-#voonvzcylc .gt_indent_3 {
+#xtonvvgxts .gt_indent_3 {
   text-indent: 15px;
 }
 
-#voonvzcylc .gt_indent_4 {
+#xtonvvgxts .gt_indent_4 {
   text-indent: 20px;
 }
 
-#voonvzcylc .gt_indent_5 {
+#xtonvvgxts .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -596,7 +596,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 000003    |        NA |          NA |          NA |
 | 000052    |        -1 |          NA |          -1 |
 | 000052    |        NA |          NA |          NA |
-| 000054    |        -6 |          NA |          -7 |
+| 000054    |         5 |          NA |           9 |
 | 000054    |        NA |          NA |          NA |
 | 000057    |         7 |          NA |           2 |
 | 000057    |        NA |          NA |          NA |
@@ -614,7 +614,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 001000    |        NA |          NA |          NA |
 | 001258    |        -4 |          NA |           1 |
 | 001258    |        NA |          NA |          NA |
-| 001262    |        -4 |          NA |           0 |
+| 001262    |        -2 |          NA |          -2 |
 | 001262    |        NA |          NA |          NA |
 | 001286    |        NA |          NA |          NA |
 | 001286    |        NA |          NA |          NA |
@@ -626,7 +626,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 002017    |        NA |          NA |          NA |
 | 002077    |         6 |          NA |          -4 |
 | 002077    |        NA |          NA |          NA |
-| 002467    |        NA |          NA |          NA |
+| 002467    |        NA |          NA |           6 |
 | 002467    |        NA |          NA |          NA |
 | 002516    |        NA |          NA |          NA |
 | 002516    |        NA |          NA |          NA |
@@ -636,7 +636,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 002719    |        NA |          NA |          NA |
 | 003342    |        -1 |          NA |           8 |
 | 003342    |        NA |          NA |          NA |
-| 003364    |        -1 |          NA |           6 |
+| 003364    |         0 |          NA |           1 |
 | 003364    |        NA |          NA |          NA |
 | 003404    |        NA |          NA |          NA |
 | 003404    |        NA |          NA |          NA |
@@ -656,7 +656,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 006095    |        NA |          NA |          NA |
 | 006455    |        NA |          NA |          NA |
 | 006455    |        NA |          NA |          NA |
-| 006767    |       -14 |          NA |          -2 |
+| 006767    |         3 |          NA |           3 |
 | 006767    |        NA |          NA |          NA |
 | 006936    |        -6 |          NA |          NA |
 | 006936    |        NA |          NA |          NA |
@@ -672,7 +672,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 008574    |        NA |          NA |          NA |
 | 008614    |        -1 |          NA |           3 |
 | 008614    |        NA |          NA |          NA |
-| 008803    |         5 |          NA |           5 |
+| 008803    |         6 |          NA |           5 |
 | 008803    |        NA |          NA |          NA |
 | 008882    |        -2 |          NA |           1 |
 | 008882    |        NA |          NA |          NA |
@@ -680,7 +680,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 009312    |        NA |          NA |          NA |
 | 009429    |        NA |          NA |           2 |
 | 009429    |        NA |          NA |          NA |
-| 009433    |        -3 |          NA |           0 |
+| 009433    |        -5 |          NA |          -1 |
 | 009433    |        NA |          NA |          NA |
 | 009454    |        -3 |          NA |          -9 |
 | 009454    |        NA |          NA |          NA |
