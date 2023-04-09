@@ -10,7 +10,7 @@ Sepsis Assignment
 
 #### The date and time of the report
 
-    Hello! The last time the report was run: 2023-04-08 23:14:02
+    Hello! The last time the report was run: 2023-04-09 01:05:25
 
 #### Recent heart rate, temperature, and respiratory rate for patients who currently have sepsis
 
@@ -33,23 +33,23 @@ table1
 }
 ```
 
-<div id="ighokcbtrt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ighokcbtrt table {
+<div id="dnthfxyfrl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dnthfxyfrl table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ighokcbtrt thead, #ighokcbtrt tbody, #ighokcbtrt tfoot, #ighokcbtrt tr, #ighokcbtrt td, #ighokcbtrt th {
+#dnthfxyfrl thead, #dnthfxyfrl tbody, #dnthfxyfrl tfoot, #dnthfxyfrl tr, #dnthfxyfrl td, #dnthfxyfrl th {
   border-style: none;
 }
 
-#ighokcbtrt p {
+#dnthfxyfrl p {
   margin: 0;
   padding: 0;
 }
 
-#ighokcbtrt .gt_table {
+#dnthfxyfrl .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -75,12 +75,12 @@ table1
   border-left-color: #D3D3D3;
 }
 
-#ighokcbtrt .gt_caption {
+#dnthfxyfrl .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ighokcbtrt .gt_title {
+#dnthfxyfrl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -92,7 +92,7 @@ table1
   border-bottom-width: 0;
 }
 
-#ighokcbtrt .gt_subtitle {
+#dnthfxyfrl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -104,7 +104,7 @@ table1
   border-top-width: 0;
 }
 
-#ighokcbtrt .gt_heading {
+#dnthfxyfrl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -116,13 +116,13 @@ table1
   border-right-color: #D3D3D3;
 }
 
-#ighokcbtrt .gt_bottom_border {
+#dnthfxyfrl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ighokcbtrt .gt_col_headings {
+#dnthfxyfrl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -137,7 +137,7 @@ table1
   border-right-color: #D3D3D3;
 }
 
-#ighokcbtrt .gt_col_heading {
+#dnthfxyfrl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -157,7 +157,7 @@ table1
   overflow-x: hidden;
 }
 
-#ighokcbtrt .gt_column_spanner_outer {
+#dnthfxyfrl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -169,15 +169,15 @@ table1
   padding-right: 4px;
 }
 
-#ighokcbtrt .gt_column_spanner_outer:first-child {
+#dnthfxyfrl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ighokcbtrt .gt_column_spanner_outer:last-child {
+#dnthfxyfrl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ighokcbtrt .gt_column_spanner {
+#dnthfxyfrl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -189,11 +189,11 @@ table1
   width: 100%;
 }
 
-#ighokcbtrt .gt_spanner_row {
+#dnthfxyfrl .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ighokcbtrt .gt_group_heading {
+#dnthfxyfrl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -219,7 +219,7 @@ table1
   text-align: left;
 }
 
-#ighokcbtrt .gt_empty_group_heading {
+#dnthfxyfrl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -234,15 +234,15 @@ table1
   vertical-align: middle;
 }
 
-#ighokcbtrt .gt_from_md > :first-child {
+#dnthfxyfrl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ighokcbtrt .gt_from_md > :last-child {
+#dnthfxyfrl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ighokcbtrt .gt_row {
+#dnthfxyfrl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -261,7 +261,7 @@ table1
   overflow-x: hidden;
 }
 
-#ighokcbtrt .gt_stub {
+#dnthfxyfrl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -274,7 +274,7 @@ table1
   padding-right: 5px;
 }
 
-#ighokcbtrt .gt_stub_row_group {
+#dnthfxyfrl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -288,15 +288,15 @@ table1
   vertical-align: top;
 }
 
-#ighokcbtrt .gt_row_group_first td {
+#dnthfxyfrl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ighokcbtrt .gt_row_group_first th {
+#dnthfxyfrl .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ighokcbtrt .gt_summary_row {
+#dnthfxyfrl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -306,16 +306,16 @@ table1
   padding-right: 5px;
 }
 
-#ighokcbtrt .gt_first_summary_row {
+#dnthfxyfrl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ighokcbtrt .gt_first_summary_row.thick {
+#dnthfxyfrl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ighokcbtrt .gt_last_summary_row {
+#dnthfxyfrl .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -325,7 +325,7 @@ table1
   border-bottom-color: #D3D3D3;
 }
 
-#ighokcbtrt .gt_grand_summary_row {
+#dnthfxyfrl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -335,7 +335,7 @@ table1
   padding-right: 5px;
 }
 
-#ighokcbtrt .gt_first_grand_summary_row {
+#dnthfxyfrl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -345,7 +345,7 @@ table1
   border-top-color: #D3D3D3;
 }
 
-#ighokcbtrt .gt_last_grand_summary_row_top {
+#dnthfxyfrl .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -355,11 +355,11 @@ table1
   border-bottom-color: #D3D3D3;
 }
 
-#ighokcbtrt .gt_striped {
+#dnthfxyfrl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ighokcbtrt .gt_table_body {
+#dnthfxyfrl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -368,7 +368,7 @@ table1
   border-bottom-color: #D3D3D3;
 }
 
-#ighokcbtrt .gt_footnotes {
+#dnthfxyfrl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -382,7 +382,7 @@ table1
   border-right-color: #D3D3D3;
 }
 
-#ighokcbtrt .gt_footnote {
+#dnthfxyfrl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -391,7 +391,7 @@ table1
   padding-right: 5px;
 }
 
-#ighokcbtrt .gt_sourcenotes {
+#dnthfxyfrl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -405,7 +405,7 @@ table1
   border-right-color: #D3D3D3;
 }
 
-#ighokcbtrt .gt_sourcenote {
+#dnthfxyfrl .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -413,63 +413,63 @@ table1
   padding-right: 5px;
 }
 
-#ighokcbtrt .gt_left {
+#dnthfxyfrl .gt_left {
   text-align: left;
 }
 
-#ighokcbtrt .gt_center {
+#dnthfxyfrl .gt_center {
   text-align: center;
 }
 
-#ighokcbtrt .gt_right {
+#dnthfxyfrl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ighokcbtrt .gt_font_normal {
+#dnthfxyfrl .gt_font_normal {
   font-weight: normal;
 }
 
-#ighokcbtrt .gt_font_bold {
+#dnthfxyfrl .gt_font_bold {
   font-weight: bold;
 }
 
-#ighokcbtrt .gt_font_italic {
+#dnthfxyfrl .gt_font_italic {
   font-style: italic;
 }
 
-#ighokcbtrt .gt_super {
+#dnthfxyfrl .gt_super {
   font-size: 65%;
 }
 
-#ighokcbtrt .gt_footnote_marks {
+#dnthfxyfrl .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ighokcbtrt .gt_asterisk {
+#dnthfxyfrl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ighokcbtrt .gt_indent_1 {
+#dnthfxyfrl .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ighokcbtrt .gt_indent_2 {
+#dnthfxyfrl .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ighokcbtrt .gt_indent_3 {
+#dnthfxyfrl .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ighokcbtrt .gt_indent_4 {
+#dnthfxyfrl .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ighokcbtrt .gt_indent_5 {
+#dnthfxyfrl .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -592,19 +592,19 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 
 | PatientID | HR_change | temp_change | Resp_change |
 |:----------|----------:|------------:|------------:|
-| 000003    |        -9 |          NA |           0 |
+| 000003    |         0 |          NA |           0 |
 | 000003    |        NA |          NA |          NA |
-| 000052    |         4 |          NA |          -4 |
+| 000052    |         3 |          NA |          -1 |
 | 000052    |        NA |          NA |          NA |
-| 000054    |        -2 |          NA |           8 |
+| 000054    |         6 |          NA |          -9 |
 | 000054    |        NA |          NA |          NA |
-| 000057    |        -1 |          NA |          -6 |
+| 000057    |        -6 |          NA |           4 |
 | 000057    |        NA |          NA |          NA |
 | 000122    |        -3 |          NA |           1 |
 | 000122    |        NA |          NA |          NA |
 | 000180    |         9 |          NA |           9 |
 | 000180    |        NA |          NA |          NA |
-| 000315    |        -6 |          NA |           2 |
+| 000315    |        -1 |          NA |          -4 |
 | 000315    |        NA |          NA |          NA |
 | 000388    |         6 |          NA |           1 |
 | 000388    |        NA |          NA |          NA |
@@ -612,83 +612,83 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 000714    |        NA |          NA |          NA |
 | 001000    |        NA |          NA |          NA |
 | 001000    |        NA |          NA |          NA |
-| 001258    |        11 |          NA |           5 |
+| 001258    |        14 |          NA |           4 |
 | 001258    |        NA |          NA |          NA |
-| 001262    |        -9 |          NA |           4 |
+| 001262    |        NA |          NA |           0 |
 | 001262    |        NA |          NA |          NA |
 | 001286    |         1 |          NA |          -1 |
 | 001286    |        NA |          NA |          NA |
-| 001759    |        -1 |          NA |           2 |
+| 001759    |        -1 |          NA |          -3 |
 | 001759    |        NA |          NA |          NA |
 | 001948    |        -6 |          NA |          -5 |
 | 001948    |        NA |          NA |          NA |
 | 002017    |         1 |          NA |           4 |
 | 002017    |        NA |          NA |          NA |
-| 002077    |         4 |          NA |           4 |
+| 002077    |        -5 |          NA |          -2 |
 | 002077    |        NA |          NA |          NA |
-| 002467    |       -10 |          NA |          -7 |
+| 002467    |        -1 |          NA |          -2 |
 | 002467    |        NA |          NA |          NA |
 | 002516    |        NA |          NA |          NA |
 | 002516    |        NA |          NA |          NA |
+| 002699    |        -6 |          NA |          -2 |
 | 002699    |        NA |          NA |          NA |
-| 002699    |        NA |          NA |          NA |
-| 002719    |         2 |          NA |           2 |
+| 002719    |         0 |          NA |          -3 |
 | 002719    |        NA |          NA |          NA |
-| 003342    |        -7 |        0.10 |          -2 |
+| 003342    |         4 |       -0.20 |          17 |
 | 003342    |        NA |          NA |          NA |
-| 003364    |        -8 |          NA |          -3 |
+| 003364    |         5 |          NA |           2 |
 | 003364    |        NA |          NA |          NA |
 | 003404    |        NA |          NA |          NA |
 | 003404    |        NA |          NA |          NA |
 | 003751    |         2 |        0.00 |          -4 |
 | 003751    |        NA |          NA |          NA |
-| 003797    |         5 |          NA |           6 |
+| 003797    |         2 |          NA |          15 |
 | 003797    |        NA |          NA |          NA |
-| 004370    |        -8 |          NA |          -9 |
+| 004370    |        11 |          NA |          -4 |
 | 004370    |        NA |          NA |          NA |
 | 004842    |        NA |          NA |          NA |
 | 004842    |        NA |          NA |          NA |
-| 005042    |        -5 |          NA |          -5 |
+| 005042    |         1 |          NA |           1 |
 | 005042    |        NA |          NA |          NA |
-| 005496    |       -10 |       -0.20 |           0 |
+| 005496    |        -3 |       -0.15 |          -4 |
 | 005496    |        NA |          NA |          NA |
 | 006095    |         0 |          NA |           0 |
 | 006095    |        NA |          NA |          NA |
 | 006455    |        NA |          NA |          NA |
 | 006455    |        NA |          NA |          NA |
-| 006767    |        -1 |        0.00 |           3 |
+| 006767    |        -1 |          NA |          -1 |
 | 006767    |        NA |          NA |          NA |
-| 006936    |         3 |          NA |          NA |
+| 006936    |        -6 |          NA |          NA |
 | 006936    |        NA |          NA |          NA |
-| 008226    |        -3 |          NA |           2 |
+| 008226    |         2 |          NA |          21 |
 | 008226    |        NA |          NA |          NA |
-| 008268    |        -3 |        0.15 |          -4 |
+| 008268    |         2 |        0.05 |           1 |
 | 008268    |        NA |          NA |          NA |
-| 008524    |         0 |          NA |          -1 |
+| 008524    |        -2 |          NA |          -1 |
 | 008524    |        NA |          NA |          NA |
-| 008536    |        -5 |          NA |           3 |
 | 008536    |        NA |          NA |          NA |
-| 008574    |         0 |          NA |          -9 |
+| 008536    |        NA |          NA |          NA |
+| 008574    |      -158 |          NA |          -1 |
 | 008574    |        NA |          NA |          NA |
-| 008614    |        -6 |          NA |          -1 |
+| 008614    |         1 |          NA |           1 |
 | 008614    |        NA |          NA |          NA |
-| 008803    |        -5 |          NA |          -1 |
+| 008803    |         5 |          NA |           8 |
 | 008803    |        NA |          NA |          NA |
-| 008882    |         3 |          NA |           6 |
+| 008882    |         1 |          NA |          -3 |
 | 008882    |        NA |          NA |          NA |
 | 009312    |        -6 |          NA |           6 |
 | 009312    |        NA |          NA |          NA |
 | 009429    |        NA |          NA |          NA |
 | 009429    |        NA |          NA |          NA |
-| 009433    |         7 |          NA |          -4 |
+| 009433    |         9 |          NA |           2 |
 | 009433    |        NA |          NA |          NA |
-| 009454    |        -4 |          NA |           5 |
+| 009454    |         3 |          NA |           1 |
 | 009454    |        NA |          NA |          NA |
+| 009511    |        -5 |          NA |          -1 |
 | 009511    |        NA |          NA |          NA |
-| 009511    |        NA |          NA |          NA |
-| 009657    |        -2 |          NA |           3 |
+| 009657    |        -6 |          NA |          -4 |
 | 009657    |        NA |          NA |          NA |
-| 009814    |        -6 |          NA |           2 |
+| 009814    |         3 |          NA |           0 |
 | 009814    |        NA |          NA |          NA |
 | 009982    |        -3 |          NA |          -4 |
 | 009982    |        NA |          NA |          NA |
