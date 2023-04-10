@@ -10,7 +10,7 @@ Sepsis Assignment
 
 #### The date and time of the report
 
-    Hello! The last time the report was run: 2023-04-10 04:16:40
+    Hello! The last time the report was run: 2023-04-10 05:13:57
 
 #### Recent heart rate, temperature, and respiratory rate for patients who currently have sepsis
 
@@ -162,7 +162,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 002017    |        NA |          NA |          NA |
 | 002077    |         6 |          NA |          -4 |
 | 002077    |        NA |          NA |          NA |
-| 002467    |        -3 |        0.35 |          -1 |
+| 002467    |        17 |        1.00 |           3 |
 | 002467    |        NA |          NA |          NA |
 | 002516    |        NA |          NA |          NA |
 | 002516    |        NA |          NA |          NA |
@@ -170,7 +170,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 002699    |        NA |          NA |          NA |
 | 002719    |        -9 |          NA |          -2 |
 | 002719    |        NA |          NA |          NA |
-| 003342    |        -7 |        0.00 |          -1 |
+| 003342    |         1 |        0.00 |           1 |
 | 003342    |        NA |          NA |          NA |
 | 003364    |        -2 |          NA |          -4 |
 | 003364    |        NA |          NA |          NA |
@@ -208,7 +208,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 008574    |        NA |          NA |          NA |
 | 008614    |        -1 |          NA |           3 |
 | 008614    |        NA |          NA |          NA |
-| 008803    |        -4 |          NA |          -1 |
+| 008803    |        -2 |          NA |           2 |
 | 008803    |        NA |          NA |          NA |
 | 008882    |        -2 |          NA |           1 |
 | 008882    |        NA |          NA |          NA |
