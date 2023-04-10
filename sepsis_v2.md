@@ -10,7 +10,7 @@ Sepsis Assignment
 
 #### The date and time of the report
 
-    Hello! The last time the report was run: 2023-04-10 03:14:29
+    Hello! The last time the report was run: 2023-04-10 04:16:40
 
 #### Recent heart rate, temperature, and respiratory rate for patients who currently have sepsis
 
@@ -32,7 +32,7 @@ table1
 |:-----------|-----------:|-----:|------------:|:--------------------|
 | 000714     |         84 |   NA |          19 | 2023-04-08 17:48:46 |
 | 001948     |         84 |   NA |          25 | 2023-04-08 22:43:12 |
-| 009433     |         94 |   NA |          32 | 2023-04-10 02:59:37 |
+| 009433     |         90 |   NA |          29 | 2023-04-10 03:51:16 |
 
 #### Plots for all patients who have sepsis that show the complete history of their heart rate, temperature, and respiratory rate during their time in the ICU.
 
@@ -162,7 +162,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 002017    |        NA |          NA |          NA |
 | 002077    |         6 |          NA |          -4 |
 | 002077    |        NA |          NA |          NA |
-| 002467    |        14 |        0.05 |           4 |
+| 002467    |        -3 |        0.35 |          -1 |
 | 002467    |        NA |          NA |          NA |
 | 002516    |        NA |          NA |          NA |
 | 002516    |        NA |          NA |          NA |
@@ -170,9 +170,9 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 002699    |        NA |          NA |          NA |
 | 002719    |        -9 |          NA |          -2 |
 | 002719    |        NA |          NA |          NA |
-| 003342    |        -7 |        0.10 |           3 |
+| 003342    |        -7 |        0.00 |          -1 |
 | 003342    |        NA |          NA |          NA |
-| 003364    |         0 |          NA |           1 |
+| 003364    |        -2 |          NA |          -4 |
 | 003364    |        NA |          NA |          NA |
 | 003404    |        NA |          NA |          NA |
 | 003404    |        NA |          NA |          NA |
@@ -208,7 +208,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 008574    |        NA |          NA |          NA |
 | 008614    |        -1 |          NA |           3 |
 | 008614    |        NA |          NA |          NA |
-| 008803    |        -2 |          NA |           0 |
+| 008803    |        -4 |          NA |          -1 |
 | 008803    |        NA |          NA |          NA |
 | 008882    |        -2 |          NA |           1 |
 | 008882    |        NA |          NA |          NA |
@@ -216,7 +216,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 009312    |        NA |          NA |          NA |
 | 009429    |        NA |          NA |           2 |
 | 009429    |        NA |          NA |          NA |
-| 009433    |         2 |          NA |           3 |
+| 009433    |        -4 |          NA |          -3 |
 | 009433    |        NA |          NA |          NA |
 | 009454    |        -3 |          NA |          -9 |
 | 009454    |        NA |          NA |          NA |
