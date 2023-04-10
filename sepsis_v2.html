@@ -135,7 +135,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h4 class="anchored" data-anchor-id="the-date-and-time-of-the-report">The date and time of the report</h4>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>Hello! The last time the report was run: 2023-04-07 22:07:37</code></pre>
+<pre><code>Hello! The last time the report was run: 2023-04-09 20:50:10</code></pre>
 </div>
 </div>
 </section>
@@ -147,97 +147,133 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(SepsisLabel <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">c</span>(PatientID, HR, Temp, Resp, obsTime)) <span class="sc">%&gt;%</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_label</span>(<span class="at">Temp =</span> <span class="st">"Temperature"</span>,</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">HR =</span> <span class="st">"Heart Rate"</span>,</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>             <span class="at">Resp =</span> <span class="st">"Respiration"</span>,</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>             <span class="at">obsTime =</span> <span class="st">"Last Update"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="st">"Most recent vital signs for Septic Patients"</span>)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>table1</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span>{</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Hooray, no septic patients to report"</span>)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Hooray, no septic patients to report"</code></pre>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">col.name =</span> <span class="fu">c</span>(<span class="st">"Patient_ID"</span>, <span class="st">"Heart_Rate"</span>, <span class="st">"Temp"</span>, <span class="st">"Respiration"</span>, <span class="st">"Obs_time"</span>))</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>table1</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span>{</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Hooray, no septic patients to report"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Patient_ID</th>
+<th style="text-align: right;">Heart_Rate</th>
+<th style="text-align: right;">Temp</th>
+<th style="text-align: right;">Respiration</th>
+<th style="text-align: left;">Obs_time</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">000714</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: left;">2023-04-08 17:48:46</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">001948</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: left;">2023-04-08 22:43:12</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </section>
 <section id="plots-for-all-patients-who-have-sepsis-that-show-the-complete-history-of-their-heart-rate-temperature-and-respiratory-rate-during-their-time-in-the-icu." class="level4">
 <h4 class="anchored" data-anchor-id="plots-for-all-patients-who-have-sepsis-that-show-the-complete-history-of-their-heart-rate-temperature-and-respiratory-rate-during-their-time-in-the-icu.">Plots for all patients who have sepsis that show the complete history of their heart rate, temperature, and respiratory rate during their time in the ICU.</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>filtered_sepsis <span class="ot">&lt;-</span> new_data <span class="sc">%&gt;%</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(PatientID) <span class="sc">%&gt;%</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">any_sepsis =</span> <span class="fu">ifelse</span>(<span class="fu">any</span>(SepsisLabel <span class="sc">==</span> <span class="dv">1</span>), <span class="dv">1</span>, <span class="dv">0</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(any_sepsis <span class="sc">==</span> <span class="dv">1</span>) </span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>patient_ids <span class="ot">&lt;-</span> <span class="fu">unique</span>(filtered_sepsis<span class="sc">$</span>PatientID)</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">nrow</span>(filtered_sepsis)<span class="sc">&gt;=</span><span class="dv">1</span>) {</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> patient_ids) {</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  patient_data <span class="ot">&lt;-</span> filtered_sepsis <span class="sc">%&gt;%</span> <span class="fu">filter</span>(PatientID <span class="sc">==</span> i)</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">nrow</span>(patient_data) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    p <span class="ot">&lt;-</span><span class="fu">ggplot</span>(patient_data, <span class="fu">aes</span>(<span class="at">x =</span> obsTime, <span class="at">y =</span> HR)) <span class="sc">+</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_line</span>(<span class="at">color=</span> <span class="st">"red"</span>) <span class="sc">+</span> </span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ggtitle</span>(<span class="fu">paste</span>(<span class="st">"HR History for Patient ID:"</span>, i)) <span class="sc">+</span></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme_minimal</span>()</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(p)</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>} </span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> patient_ids) {</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>  patient_data <span class="ot">&lt;-</span> filtered_sepsis <span class="sc">%&gt;%</span> <span class="fu">filter</span>(PatientID <span class="sc">==</span> i)</span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">nrow</span>(patient_data) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    t <span class="ot">&lt;-</span><span class="fu">ggplot</span>(patient_data, <span class="fu">aes</span>(<span class="at">x =</span> obsTime, <span class="at">y =</span> Temp)) <span class="sc">+</span></span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"darkgreen"</span>) <span class="sc">+</span></span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_line</span>(<span class="at">color=</span> <span class="st">"darkgreen"</span>) <span class="sc">+</span> </span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ggtitle</span>(<span class="fu">paste</span>(<span class="st">"Temp History for Patient ID:"</span>, i)) <span class="sc">+</span></span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme_minimal</span>()</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(t)</span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> patient_ids) {</span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>  patient_data <span class="ot">&lt;-</span> filtered_sepsis <span class="sc">%&gt;%</span> <span class="fu">filter</span>(PatientID <span class="sc">==</span> i)</span>
-<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">nrow</span>(patient_data) <span class="sc">&gt;</span><span class="dv">0</span>){</span>
-<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>    r <span class="ot">&lt;-</span><span class="fu">ggplot</span>(patient_data, <span class="fu">aes</span>(<span class="at">x=</span>obsTime, <span class="at">y=</span> Resp)) <span class="sc">+</span></span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_point</span>(<span class="at">color=</span> <span class="st">"lightblue"</span>) <span class="sc">+</span></span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"lightblue"</span>) <span class="sc">+</span></span>
-<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ggtitle</span>(<span class="fu">paste</span>(<span class="st">"Resp History for Patient ID:"</span>, i)) <span class="sc">+</span></span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme_minimal</span>()</span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(r)</span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span>{</span>
-<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Hooray, no septic patients to graph"</span>)</span>
-<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "Hooray, no septic patients to graph"</code></pre>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>filtered_sepsis <span class="ot">&lt;-</span> new_data <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(PatientID) <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">any_sepsis =</span> <span class="fu">ifelse</span>(<span class="fu">any</span>(SepsisLabel <span class="sc">==</span> <span class="dv">1</span>), <span class="dv">1</span>, <span class="dv">0</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(any_sepsis <span class="sc">==</span> <span class="dv">1</span>) </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>patient_ids <span class="ot">&lt;-</span> <span class="fu">unique</span>(filtered_sepsis<span class="sc">$</span>PatientID)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">nrow</span>(filtered_sepsis)<span class="sc">&gt;=</span><span class="dv">1</span>) {</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> patient_ids) {</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  patient_data <span class="ot">&lt;-</span> filtered_sepsis <span class="sc">%&gt;%</span> <span class="fu">filter</span>(PatientID <span class="sc">==</span> i)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">nrow</span>(patient_data) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    p <span class="ot">&lt;-</span><span class="fu">ggplot</span>(patient_data, <span class="fu">aes</span>(<span class="at">x =</span> obsTime, <span class="at">y =</span> HR)) <span class="sc">+</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_line</span>(<span class="at">color=</span> <span class="st">"red"</span>) <span class="sc">+</span> </span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ggtitle</span>(<span class="fu">paste</span>(<span class="st">"HR History for Patient ID:"</span>, i)) <span class="sc">+</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme_minimal</span>()</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(p)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>} </span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> patient_ids) {</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  patient_data <span class="ot">&lt;-</span> filtered_sepsis <span class="sc">%&gt;%</span> <span class="fu">filter</span>(PatientID <span class="sc">==</span> i)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">nrow</span>(patient_data) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    t <span class="ot">&lt;-</span><span class="fu">ggplot</span>(patient_data, <span class="fu">aes</span>(<span class="at">x =</span> obsTime, <span class="at">y =</span> Temp)) <span class="sc">+</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"darkgreen"</span>) <span class="sc">+</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_line</span>(<span class="at">color=</span> <span class="st">"darkgreen"</span>) <span class="sc">+</span> </span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ggtitle</span>(<span class="fu">paste</span>(<span class="st">"Temp History for Patient ID:"</span>, i)) <span class="sc">+</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme_minimal</span>()</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(t)</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> patient_ids) {</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  patient_data <span class="ot">&lt;-</span> filtered_sepsis <span class="sc">%&gt;%</span> <span class="fu">filter</span>(PatientID <span class="sc">==</span> i)</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="fu">nrow</span>(patient_data) <span class="sc">&gt;</span><span class="dv">0</span>){</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>    r <span class="ot">&lt;-</span><span class="fu">ggplot</span>(patient_data, <span class="fu">aes</span>(<span class="at">x=</span>obsTime, <span class="at">y=</span> Resp)) <span class="sc">+</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_point</span>(<span class="at">color=</span> <span class="st">"lightblue"</span>) <span class="sc">+</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>      <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"lightblue"</span>) <span class="sc">+</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>      <span class="fu">ggtitle</span>(<span class="fu">paste</span>(<span class="st">"Resp History for Patient ID:"</span>, i)) <span class="sc">+</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>      <span class="fu">theme_minimal</span>()</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(r)</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span>{</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Hooray, no septic patients to graph"</span>)</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="sepsis_v2_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output-display">
+<p><img src="sepsis_v2_files/figure-html/unnamed-chunk-13-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output-display">
+<p><img src="sepsis_v2_files/figure-html/unnamed-chunk-13-3.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output-display">
+<p><img src="sepsis_v2_files/figure-html/unnamed-chunk-13-4.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output-display">
+<p><img src="sepsis_v2_files/figure-html/unnamed-chunk-13-5.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output-display">
+<p><img src="sepsis_v2_files/figure-html/unnamed-chunk-13-6.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section>
 <section id="a-table-showing-the-change-in-heart-rate-temperature-and-respiratory-rate-between-the-last-two-measurements-for-all-patients" class="level4">
 <h4 class="anchored" data-anchor-id="a-table-showing-the-change-in-heart-rate-temperature-and-respiratory-rate-between-the-last-two-measurements-for-all-patients">A table showing the change in heart rate, temperature, and respiratory rate between the last two measurements for all patients</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>new_data <span class="sc">%&gt;%</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(PatientID) <span class="sc">%&gt;%</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(obsTime, <span class="at">.by_group =</span> <span class="cn">TRUE</span>, <span class="at">desc=</span><span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_max</span>(<span class="at">n=</span><span class="dv">2</span>, <span class="at">order_by=</span>obsTime) <span class="sc">%&gt;%</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">prev_HR =</span> <span class="fu">lag</span>(HR, <span class="at">order_by =</span> obsTime),</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">HR_change =</span> (HR<span class="sc">-</span> prev_HR),</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">prev_resp =</span> <span class="fu">lag</span>(Resp, <span class="at">order_by =</span> obsTime),</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">Resp_change =</span> (Resp <span class="sc">-</span> prev_resp),</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">prev_temp =</span> <span class="fu">lag</span>(Temp, <span class="at">order_by =</span> obsTime),</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">temp_change =</span> (Temp <span class="sc">-</span> prev_temp)) <span class="sc">%&gt;%</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(PatientID, HR_change, temp_change, Resp_change) <span class="sc">%&gt;%</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>new_data <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(PatientID) <span class="sc">%&gt;%</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(obsTime, <span class="at">.by_group =</span> <span class="cn">TRUE</span>, <span class="at">desc=</span><span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_max</span>(<span class="at">n=</span><span class="dv">2</span>, <span class="at">order_by=</span>obsTime) <span class="sc">%&gt;%</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">prev_HR =</span> <span class="fu">lag</span>(HR, <span class="at">order_by =</span> obsTime),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">HR_change =</span> (HR<span class="sc">-</span> prev_HR),</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>         <span class="at">prev_resp =</span> <span class="fu">lag</span>(Resp, <span class="at">order_by =</span> obsTime),</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>         <span class="at">Resp_change =</span> (Resp <span class="sc">-</span> prev_resp),</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">prev_temp =</span> <span class="fu">lag</span>(Temp, <span class="at">order_by =</span> obsTime),</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">temp_change =</span> (Temp <span class="sc">-</span> prev_temp)) <span class="sc">%&gt;%</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(PatientID, HR_change, temp_change, Resp_change) <span class="sc">%&gt;%</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
 <thead>
@@ -252,8 +288,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td style="text-align: left;">000003</td>
 <td style="text-align: right;">2</td>
-<td style="text-align: right;">0.28</td>
-<td style="text-align: right;">-2</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">000003</td>
@@ -263,9 +299,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">000052</td>
-<td style="text-align: right;">-8</td>
-<td style="text-align: right;">0.45</td>
-<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">000052</td>
@@ -275,9 +311,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">000054</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: right;">-6</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">-1</td>
+<td style="text-align: right;">5</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">000054</td>
@@ -287,9 +323,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">000057</td>
+<td style="text-align: right;">7</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
+<td style="text-align: right;">2</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">000057</td>
@@ -299,9 +335,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">000122</td>
-<td style="text-align: right;">3</td>
+<td style="text-align: right;">-3</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">6</td>
+<td style="text-align: right;">-4</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">000122</td>
@@ -311,7 +347,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">000180</td>
-<td style="text-align: right;">14</td>
+<td style="text-align: right;">3</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">1</td>
 </tr>
@@ -323,9 +359,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">000315</td>
-<td style="text-align: right;">3</td>
+<td style="text-align: right;">-3</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">0</td>
+<td style="text-align: right;">-2</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">000315</td>
@@ -335,9 +371,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">000388</td>
-<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">-1</td>
+<td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">000388</td>
@@ -347,9 +383,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">000714</td>
-<td style="text-align: right;">6</td>
+<td style="text-align: right;">-2</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">000714</td>
@@ -359,9 +395,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">001000</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">-0.50</td>
 <td style="text-align: right;">-2</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">NA</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">001000</td>
@@ -371,9 +407,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">001258</td>
-<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-4</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">-1</td>
+<td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">001258</td>
@@ -383,9 +419,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">001262</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: right;">-3</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">0</td>
+<td style="text-align: right;">-5</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">001262</td>
@@ -395,7 +431,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">001286</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 </tr>
@@ -408,8 +444,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tr class="odd">
 <td style="text-align: left;">001759</td>
 <td style="text-align: right;">-2</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">2</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">001759</td>
@@ -419,9 +455,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">001948</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: right;">-6</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">5</td>
+<td style="text-align: right;">-5</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">001948</td>
@@ -431,9 +467,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">002017</td>
-<td style="text-align: right;">-1</td>
+<td style="text-align: right;">1</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">14</td>
+<td style="text-align: right;">4</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">002017</td>
@@ -443,9 +479,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">002077</td>
-<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">0</td>
+<td style="text-align: right;">-4</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">002077</td>
@@ -455,9 +491,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">002467</td>
-<td style="text-align: right;">-7</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">-3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.40</td>
+<td style="text-align: right;">-9</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">002467</td>
@@ -467,9 +503,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">002516</td>
-<td style="text-align: right;">1</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">2</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">002516</td>
@@ -479,9 +515,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">002699</td>
-<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">-1</td>
+<td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">002699</td>
@@ -491,9 +527,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">002719</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">-0.60</td>
-<td style="text-align: right;">0</td>
+<td style="text-align: right;">-9</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-2</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">002719</td>
@@ -503,9 +539,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">003342</td>
-<td style="text-align: right;">0</td>
+<td style="text-align: right;">-6</td>
 <td style="text-align: right;">-0.15</td>
-<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">003342</td>
@@ -515,9 +551,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 <tr class="odd">
 <td style="text-align: left;">003364</td>
-<td style="text-align: right;">-14</td>
+<td style="text-align: right;">-3</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">-5</td>
+<td style="text-align: right;">0</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">003364</td>
@@ -532,58 +568,58 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td style="text-align: right;">NA</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">003751</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">-0.10</td>
-<td style="text-align: right;">0</td>
+<td style="text-align: left;">003404</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">003751</td>
-<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-30</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">003797</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.10</td>
-<td style="text-align: right;">0</td>
+<td style="text-align: left;">003751</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">003797</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">003797</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">004370</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">7</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">004370</td>
-<td style="text-align: right;">-10</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">004370</td>
+<td style="text-align: left;">004842</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">004842</td>
-<td style="text-align: right;">-3</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">-2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">004842</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">005042</td>
-<td style="text-align: right;">-12</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">-10</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">005042</td>
@@ -592,252 +628,258 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td style="text-align: right;">NA</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">005042</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">005496</td>
-<td style="text-align: right;">19</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">005496</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">006095</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">006095</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">006455</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">006455</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">006767</td>
-<td style="text-align: right;">-5</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">-1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">006767</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">006936</td>
-<td style="text-align: right;">-2</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">006936</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">008226</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.20</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">008226</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">008268</td>
-<td style="text-align: right;">-12</td>
-<td style="text-align: right;">-0.80</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">008268</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">008524</td>
-<td style="text-align: right;">-2</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">008524</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">008536</td>
-<td style="text-align: right;">-15</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">-5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">008536</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">008574</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">008574</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">008614</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">-13</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">008614</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">008803</td>
-<td style="text-align: right;">-3</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">008803</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">008882</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">008882</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">009312</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">009312</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">009429</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">009429</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">009433</td>
 <td style="text-align: right;">9</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">-7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">005496</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">006095</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">006095</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">006455</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">006455</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">006767</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">006767</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">006936</td>
+<td style="text-align: right;">-6</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">006936</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">008226</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-0.17</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">008226</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">008268</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">-0.50</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">008268</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">008524</td>
+<td style="text-align: right;">-9</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">008524</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">008536</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">008536</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">008574</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">008574</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">008614</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">008614</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">008803</td>
+<td style="text-align: right;">2</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">2</td>
 </tr>
+<tr class="even">
+<td style="text-align: left;">008803</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
 <tr class="odd">
+<td style="text-align: left;">008882</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">008882</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">009312</td>
+<td style="text-align: right;">-6</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">009312</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">009429</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">009429</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">009433</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">-3</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">009433</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">009454</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0.72</td>
-<td style="text-align: right;">-1</td>
-</tr>
 <tr class="odd">
 <td style="text-align: left;">009454</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">009511</td>
 <td style="text-align: right;">-3</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-9</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">009454</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">009511</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">009511</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">009657</td>
-<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">-1</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">009657</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">009814</td>
-<td style="text-align: right;">2</td>
+<td style="text-align: right;">14</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">0</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">009814</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">009982</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">1</td>
-</tr>
 <tr class="odd">
+<td style="text-align: left;">009982</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">009982</td>
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
