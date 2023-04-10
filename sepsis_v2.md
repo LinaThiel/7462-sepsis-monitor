@@ -10,7 +10,7 @@ Sepsis Assignment
 
 #### The date and time of the report
 
-    Hello! The last time the report was run: 2023-04-10 09:14:14
+    Hello! The last time the report was run: 2023-04-10 10:15:15
 
 #### Recent heart rate, temperature, and respiratory rate for patients who currently have sepsis
 
@@ -28,11 +28,11 @@ table1
 }
 ```
 
-| Patient_ID | Heart_Rate | Temp | Respiration | Obs_time            |
-|:-----------|-----------:|-----:|------------:|:--------------------|
-| 000714     |         84 |   NA |          19 | 2023-04-08 17:48:46 |
-| 001948     |         84 |   NA |          25 | 2023-04-08 22:43:12 |
-| 009433     |         89 |   NA |          32 | 2023-04-10 09:11:03 |
+| Patient_ID | Heart_Rate |  Temp | Respiration | Obs_time            |
+|:-----------|-----------:|------:|------------:|:--------------------|
+| 000714     |         84 |    NA |          19 | 2023-04-08 17:48:46 |
+| 001948     |         84 |    NA |          25 | 2023-04-08 22:43:12 |
+| 009433     |         94 | 38.44 |          34 | 2023-04-10 09:36:59 |
 
 #### Plots for all patients who have sepsis that show the complete history of their heart rate, temperature, and respiratory rate during their time in the ICU.
 
@@ -216,7 +216,7 @@ mutate(prev_HR = lag(HR, order_by = obsTime),
 | 009312    |        NA |          NA |          NA |
 | 009429    |        NA |          NA |           2 |
 | 009429    |        NA |          NA |          NA |
-| 009433    |        -2 |          NA |           2 |
+| 009433    |         6 |          NA |           3 |
 | 009433    |        NA |          NA |          NA |
 | 009454    |        -3 |          NA |          -9 |
 | 009454    |        NA |          NA |          NA |
